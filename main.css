@@ -6,15 +6,27 @@ body{
 #header{
 
     width: auto;
-    height: 10em;
-    padding-top: 5em;
+    height: 4em;
+    padding-top: 2em;
     background-color: royalblue;
     text-align: center;
-    margin-top: 6em;
-    margin-left: 6em;
-    margin-right: 6em;
-    margin-bottom: 6em;
-    
+    margin-top: 3em;
+    margin-left: 3em;
+    margin-right: 3em;
+    margin-bottom: 3em;
+    font-size: xx-large;
+
+}
+#users_header{
+
+    width: auto;
+    height: 1.5em;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+    background-color:green;
+    text-align: center;
+    margin-top: 4em;
+    font-size: x-large;
 
 }
 
@@ -24,12 +36,20 @@ body{
     height: auto;
     background-color: aqua;
     padding: 0.5em;
+    text-align: center;
     
 
 }
 .posts_container{
 
     background-color: red;
+    padding-top: 0.5em;
+
+
+}
+.body_posts_container{
+
+    background-color: hotpink;
 
 
 }

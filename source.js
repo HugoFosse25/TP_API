@@ -34,16 +34,28 @@ async function API_fetch(page, id) {
         name.setAttribute('id', user.id);
         name.innerHTML = `<p>${user.name}</p>`;
         p_data.appendChild(name);
-        name.addEventListener("click", function(){
+        name.addEventListener("click", async function(){
             
             if(user.ouvert == false){
 
-                posts =  API_fetch("posts", index);
+                posts = await API_fetch("posts", index);
+                console.log(posts);
                 let post_content = document.createElement("div");
                 post_content.setAttribute('id', `user${user.id}_container`);
                 post_content.setAttribute('class', "posts_container");
                 name.appendChild(post_content);
-                post_content.innerHTML = `<p>${user.title}</p>`;
+                posts.forEach((post) => {
+
+                    post_content.innerHTML = `<p>${post.title}</p>`;
+                    let body_post_content = document.createElement("div");
+                    body_post_content.setAttribute('class', "body_posts_container");
+                    body_post_content.innerHTML = `<p>${post.body}</p>`;
+                    post_content.appendChild(body_post_content);
+
+                })
+
+                    
+                
                 user.ouvert = true;
 
             }else{
